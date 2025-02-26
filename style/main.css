@@ -120,18 +120,20 @@ a {
   width: 1.5em;
   cursor: pointer;
 }
-/* .products {} */
+
 .palettes {
   display: flex;
   gap: 1em;
   align-items: center;
 }
 .palettes_color {
-  width: 3em;
-  height: 3em;
-  border-radius: 1em;
+  display: flex;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 0.6em;
   cursor: pointer;
 }
+
 .container {
   padding: 5em;
 }
@@ -199,7 +201,7 @@ a {
   height: 40px;
   position: fixed;
   top: 45%;
-  right: 0;
+  right: 2.5px;
   background-color: rgba(29, 37, 49, 0.6);
   -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
@@ -297,6 +299,13 @@ a {
   background: #4b5966;
   margin-top: 1em;
   transform: translateX(-5%);
+}
+.colors {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
 }
 
 .tools-menu-colors h2 {

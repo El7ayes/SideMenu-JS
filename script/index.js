@@ -155,13 +155,34 @@ const products = [
 ];
 const palettes = [
   {
-    code: "#fb8500",
+    code: "#5caf90",
   },
   {
-    code: "#219ebc",
+    code: "#8118d5",
   },
   {
-    code: "#606c38",
+    code: "#5f6af5",
+  },
+  {
+    code: "#f5885f",
+  },
+  {
+    code: "#32dbe2",
+  },
+  {
+    code: "#3f51b5",
+  },
+  {
+    code: "#f44336",
+  },
+  {
+    code: "#e91e63",
+  },
+  {
+    code: "#607d8b",
+  },
+  {
+    code: "#03492f",
   },
 ];
 products.map((product) => {
@@ -210,15 +231,16 @@ products.map((product) => {
 palettes.map((color) => {
   let temp = ``;
   temp += `
-    <div class="tools-menu ">
-    <div class="white-bg">
-    <div class="tools-menu-header">
-    <h2>Tools</h2>
-    </div>
-    
+  <div class="tools-menu ">
+  <div class="white-bg">
+  <div class="tools-menu-header">
+  <h2>Tools</h2>
+  </div>
+  
     <div class="tools-menu-colors">
     <h2>Select Color</h2>
-    <div class="palettes_color" data-theme="${color.code}"></div>
+    <div class="colors">
+    </div>
                     </div>
 
                     <div class="tools-menu-directions">
@@ -253,9 +275,20 @@ palettes.map((color) => {
     `;
   document.querySelector(".palettes").innerHTML += temp;
 });
-const palettes_color = document.querySelectorAll(".palettes_color");
+
+palettes.map((color) => {
+  let temp = ``;
+  temp += `
+    
+      <div class="palettes_color" data-theme="${color.code}"></div> 
+    
+  `;
+  document.querySelector(".colors").innerHTML += temp;
+});
+const palettes_color = document.querySelectorAll(".colors .palettes_color");
 const dataColorSet = document.querySelectorAll("[data-color]");
 console.log(dataColorSet);
+console.log(palettes_color);
 
 palettes_color.forEach((ele) => {
   ele.style.background = ele.dataset.theme;
